@@ -1,0 +1,79 @@
+@import url('bootstrap.min.css');
+
+span {
+ margin: 0.1em; 
+}
+
+span.inactive {
+	font-size: 1.25em;
+	display: inline-block;
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	padding-bottom: 0.5em;
+	color: #fff;
+	background: linear-gradient(to bottom, #555555, #484848);
+	text-shadow: 1px 1px 1px #151515;
+	border-radius: 0.25em;
+}
+
+span.inactive:hover {
+		text-shadow: 1px 1px 15px rgba(255, 255, 255, 0.75);
+}
+
+span.active {
+	
+font-weight: bold;
+background-image: linear-gradient(to bottom, #17b0ff, #0096e3);
+color: fff;
+text-shadow: 1px 1px 1px #151515;
+}
+
+div {
+  transition: all linear 0.5s;
+  height: 100%
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-top:1em;
+}
+
+div.hidden {
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
+}
+
+.animate-enter, 
+.animate-leave
+{ 
+	-webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	-moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	-ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	-o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	text-overflow: clip;
+	white-space:nowrap;
+} 
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	top:-200px;
+	left: 200px;
+}
+
+.animate-enter.animate-enter-active, 
+.animate-leave {
+	opacity: 1;
+	width: 150px;
+	height: 130px;
+}

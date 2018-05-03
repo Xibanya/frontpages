@@ -9,3 +9,4 @@ capture.sh is run locally as a scheduled windows task once an hour at about 30 m
 
 ## How to suggest changes
 Make a pull request here, shoot me an email at manuelamalasanya@gmail.com, or contact me on Twitter [@ManuelaXibanya](http://twitter.com/manuelaxibanya)
+

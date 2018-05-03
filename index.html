@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="shortcut icon" href="emot-v.gif" />
+<title>MSM Front Page Roundup</title>
+<meta name="description" content="View side-by-side comparisons of major online news outlets."/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="angular.js"></script>
+<script src="controller.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-96111084-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body ng-app ng-controller="News">
+<div class="container">
+	<div class="row text-center" style="margin-top: 2em; padding-left: 1em; padding-right: 1em;">
+	<span ng-click="all()" ng-class="{active:spanActive()}" class="inactive" id="alltoggle">Show All</span>
+	<span ng-repeat="source in sources" ng-click="toggleActive(source)" ng-class="{active:source.active}" class="inactive">{{source.name}}</span>
+	</div>
+	</div>
+
+<div class="row" style="padding-left: 1em; padding-right: 1em;"> 
+    	<div ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="source in sources | filter:{active:true}" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+			<img ng-src="{{source.img}}" class="img-responsive" ng-click="toggleActive(source)">
+		</div>
+</div>
+
+<div class="container">
+<div class="container-fluid text-center" style="margin-top:2em; margin-bottom:1em;">
+
+
+<div class="input-group">
+<span class="input-group-addon">Share</span>
+<input type="text" class="form-control" id="share" onClick="this.select();"></input>
+</div>
+</div>
+
+<div class="container-fluid text-center">
+<p>Updated <span id="footer"></span> | <span><a href="https://github.com/Xibanya/frontpages">About</a></span></p>
+</div>
+</div>
+<!-- test2 -->
+</body>
+</html>
