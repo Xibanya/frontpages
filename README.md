@@ -1,6 +1,8 @@
 # frontpages
 Compare front pages of various online news sources!  Check it out!  http://xibanya.github.io/frontpages
 
+May 3 2018 update! Site refreshes are temporarily disabled as I try to find a different solution from using a scheduled task on my own desktop at home to make the site work, but frontpages will update again soon!  Soonish!
+
 ## How to use it
 Click the buttons near the top of the screen to see a 1200x1200 screenshot of the front page of the named news source taken within the last hour.  Click the image or click the button again to dismiss.  Copy and paste the link generated at the bottom of the page to share the currently displayed combination of images.
 
